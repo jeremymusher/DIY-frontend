@@ -3,15 +3,13 @@ import PostCard from "./PostCard";
 
 function Results({ posts }) {
   return (
-    <div>
-      <section>
+      <section className="cardList">
         {posts.map((post) => (
           <div>
             <PostCard post={post} />
           </div>
         ))}
       </section>
-    </div>
   );
 }
 

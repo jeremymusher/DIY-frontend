@@ -8,6 +8,7 @@ function PostDetails(props) {
         fetch(url)
             .then((res) => res.json())
             .then((res) => setPost(res))
+            .then(console.log(post.video_id))
             .catch(console.error);
     }, []);
 
@@ -15,8 +16,10 @@ function PostDetails(props) {
         <div>
             <h1>{post.title}</h1>
             <h2>Created By: {post.author}</h2>
-            <iframe width = "850" height = "480" className = "videoCard" src={post.video_url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe width = "850" height = "480" className = "videoCard" src={`https://www.youtube.com/embed/${post.video_id}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <div className="postText">
             <h2>{post.text}</h2>
+            </div>
         </div>
     )
 }
