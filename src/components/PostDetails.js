@@ -15,8 +15,8 @@ function PostDetails(props) {
     }, []);
 
     return (
-        <div>
-            <h1>{post.title}</h1>
+        <div className="content">
+            <h1 className="title">{post.title}</h1>
             <h2>Created By: {post.author}</h2>
             <VideoPlayer video_id={post.video_id} />
             <div className="postText">

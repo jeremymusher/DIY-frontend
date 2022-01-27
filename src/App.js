@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Header from './components/Header';
 import PostDetails from "./components/PostDetails"
 import EditPost from "./components/EditPost"
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" exact component={Home} />
       <Route path="/details/:_id" component={PostDetails} />
       <Route path="/update/:_id" component={EditPost} />
+      <Footer />
     </div>
   );
 }

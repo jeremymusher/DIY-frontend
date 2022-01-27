@@ -15,7 +15,7 @@ function Home() {
       }, []);
 
     return (
-        <div>
+        <div className="content">
           <Results posts={posts} url={url}/>
         </div>
     );

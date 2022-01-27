@@ -1,14 +1,24 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
-.header{
+.header, .footer{
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.content {
+  min-height: calc(100vh - 130px);
+}
+
+.title {
+margin-top: 0;
+padding-top: 30px;
+}
+
 .header h1{
   margin: 0.5em 60px 0.5em;
 }

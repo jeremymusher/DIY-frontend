@@ -56,7 +56,7 @@ function EditPost(props) {
       }
 
     return(
-    <div>
+    <div className="content">
         <form onSubmit={handleSubmit}>
         <Link to={`/details/${props.match.params._id}`} id="returnLink">
             <button className="ReturnButton">Go Back</button>
