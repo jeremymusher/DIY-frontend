@@ -3,7 +3,7 @@ import Results from './Results'
 
 function Home() {
     const [posts, setPosts] = useState([]);
-    const url = 'http://localhost:8000/posts';
+    const url = `${process.env.REACT_APP_API_URL}posts`;
 
     useEffect(() => {
         fetch(url)

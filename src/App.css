@@ -48,3 +48,6 @@ a {
   color: black;
 }
 
+textarea {
+  font-family: inherit; 
+}
