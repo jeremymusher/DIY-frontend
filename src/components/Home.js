@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Results from './Results'
+import { Link } from "react-router-dom";
 
-function Home() {
+function Home({url}) {
     const [posts, setPosts] = useState([]);
-    const url = `${process.env.REACT_APP_API_URL}posts`;
 
     useEffect(() => {
         fetch(url)
@@ -16,6 +16,11 @@ function Home() {
 
     return (
         <div className="content">
+          <div className="TopBarResults">
+          <Link to={"/new"} className='newPostButton'>
+                <button> Create a New Post</button>
+          </Link>
+          </div>
           <Results posts={posts} url={url}/>
         </div>
     );

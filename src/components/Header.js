@@ -8,9 +8,6 @@ function Header() {
             <Link to={"/"} className="homeButton">
             <h1>DIY</h1>
             </Link>
-            <Link to={"/new"} className='newPostButton'>
-                <button> Create a New Post</button>
-            </Link>
         </div>
     );
 }

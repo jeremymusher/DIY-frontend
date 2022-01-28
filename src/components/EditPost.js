@@ -21,7 +21,8 @@ function EditPost(props) {
         .then((res) => {
             setPost(res);
         })
-        .then(window.location = redirectPage)
+        .then(window.location.href = redirectPage)
+        .catch(console.error);
     }
     
     useEffect(() => {
@@ -49,10 +50,6 @@ function EditPost(props) {
 
       function handleDelete() {
         fetch(url, { method: "DELETE" });
-      }
-
-      function redirect() {
-          
       }
 
     return(
@@ -116,8 +113,8 @@ function EditPost(props) {
                 />
               </div>
           </div>
-          <br />
-          <input type="submit" value="Submit" onClick={redirect()}/>
+          <br /> 
+          <input type="submit" value="Submit"/>
         </form>
     </div>
     )
