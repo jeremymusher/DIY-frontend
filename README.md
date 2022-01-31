@@ -17,13 +17,13 @@ The purpose of this app is to compile youtube tutorial videos, so users can find
 
 ## User Stories
 
-As a DIYer i would like to be able to make a new post.
-As a DIYer i would like to be able to access the posts made by others.
-As a DIYer i would like to be able to upload videos to my post.
+As a DIYer can make a new post.
+As a DIYer I can access the posts made by others.
+As a DIYer I can upload videos to my post.
 
 ## Stretch Goals for Future Contributions
 
-As a DIYer i would like to be able to login/logout/signup.
-As a DIYer i would like to have a search bar to find posts.
-As a DIYer i would like to be able to make comments on the posts of other users, and view others comments on my posts.
-As a DIYer i would like to be able to like/dislike posts, and see those likes and dislikes on the post card and details.
+As a DIYer I would like to be able to login/logout/signup.
+As a DIYer I would like to have a search bar to find posts.
+As a DIYer I would like to be able to make comments on the posts of other users, and view others comments on my posts.
+As a DIYer I would like to be able to like/dislike posts, and see those likes and dislikes on the post card and details.
