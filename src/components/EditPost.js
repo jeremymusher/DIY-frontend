@@ -5,7 +5,7 @@ import VideoPlayer from "./VideoPlayer";
 function EditPost(props) {
     const [post, setPost] = useState({});
     const [videoID, setVideoID] = useState({})
-    const url = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://musher-diy-backend.herokuapp.com/posts"
+    const url = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://musher-diy-backend.herokuapp.com/"
     const Fetchurl = `${url}posts/${props.match.params._id}`;
     const redirectPage = `/details/${props.match.params._id}`
 
