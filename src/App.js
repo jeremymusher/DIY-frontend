@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import NewPost from './components/NewPost';
 
 function App() {
-  const url = `${process.env.REACT_APP_API_URL}posts/`;
+  const url = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://musher-diy-backend.herokuapp.com/"
 
   return (
     <div className="App">

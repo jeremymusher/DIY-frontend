@@ -5,7 +5,8 @@ import VideoPlayer from "./VideoPlayer";
 function EditPost(props) {
     const [post, setPost] = useState({});
     const [videoID, setVideoID] = useState({})
-    const url = `${process.env.REACT_APP_API_URL}posts/${props.match.params._id}`;
+    const url = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://musher-diy-backend.herokuapp.com/posts"
+    const Fetchurl = `${url}posts/${props.match.params._id}`;
     const redirectPage = `/details/${props.match.params._id}`
 
     async function call(url, data = {}) {
@@ -26,7 +27,7 @@ function EditPost(props) {
     }
     
     useEffect(() => {
-        fetch(url)
+        fetch(Fetchurl)
         .then((res) => res.json())
         .then((res) => setPost(res))
         .catch(console.error);
@@ -36,7 +37,7 @@ function EditPost(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        call(url, post).then(console.log(post));
+        call(Fetchurl, post).then(console.log(post));
       }
     
       function handleChange(e) {
@@ -49,7 +50,7 @@ function EditPost(props) {
       }
 
       function handleDelete() {
-        fetch(url, { method: "DELETE" });
+        fetch(Fetchurl, { method: "DELETE" });
       }
 
     return(

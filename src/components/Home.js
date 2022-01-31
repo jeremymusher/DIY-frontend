@@ -6,7 +6,7 @@ function Home({url}) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(url)
+        fetch(`${url}posts`)
           .then((res) => res.json())
           .then((json) => {
             setPosts(json);

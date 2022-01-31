@@ -27,7 +27,7 @@ async function call(url, data = {}) {
 
 function handleSubmit(e) {
     e.preventDefault();
-    call(url, newPost).then((newPost) => console.log(newPost));
+    call(`${url}posts`, newPost).then((newPost) => console.log(newPost));
   }
 
   function handleChange(e) {

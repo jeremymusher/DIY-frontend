@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import VideoPlayer from "./VideoPlayer";
 
 function PostDetails(props) {
+    const url = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://musher-diy-backend.herokuapp.com/"
     const [post, setPost] = useState({});
-    const url = `${process.env.REACT_APP_API_URL}posts/${props.match.params._id}`;
+    const Fetchurl = `${url}posts/${props.match.params._id}`;
     
 
     useEffect(() => {
-        fetch(url)
+        fetch(Fetchurl)
             .then((res) => res.json())
             .then((res) => setPost(res))
             .catch(console.error);
